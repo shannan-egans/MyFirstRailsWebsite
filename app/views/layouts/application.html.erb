@@ -55,7 +55,7 @@ It is not content-- which should be stored in the view folder of the controller 
     </header>
     <%= yield %>
     <!--footer application.html.erb-->
-    <footer class="bg-stone-300 pt-" aria-labelledby="footer-heading">
+    <footer class="bg-stone-300" aria-labelledby="footer-heading">
       <h2 id="footer-heading" class="sr-only">Footer</h2>
       <div class="mx-auto max-w-md px-6 pt-12 sm:max-w-7xl lg:px-8 lg:pt-12">
         <div class="xl:grid xl:grid-cols-3 xl:gap-8">
@@ -100,6 +100,43 @@ It is not content-- which should be stored in the view folder of the controller 
           <div class="mt-12 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
             <div class="md:grid md:grid-cols-2 md:gap-8">
               <div>
+                <h3 class="text-base font-medium text-stone-900">Company</h3>
+                <ul role="list" class="mt-4 space-y-4">
+                  <li>
+                    <%= link_to 'about' do %>
+                      <span class="text-base text-stone-500 hover:text-stone-900">About</span>
+                    <% end %>
+                  </li>
+                  <li>
+                    <%= link_to 'articles' do %>
+                      <span class="text-base text-stone-500 hover:text-stone-900">Blog</span>
+                    <% end %>
+                  </li>
+                </ul>
+              </div>
+              <div class="mt-12 md:mt-0">
+                <h3 class="text-base font-medium text-stone-900">Support</h3>
+                <ul role="list" class="mt-4 space-y-4">
+                  <li>
+                    <%= link_to 'pricing' do %>
+                      <span class="text-base text-stone-500 hover:text-stone-900">Pricing</span>
+                    <% end %>
+                  </li>
+                  <li>
+                    <a href="#" class="text-base text-stone-500 hover:text-stone-900">Documentation</a>
+                  </li>
+                  <li>
+                    <a href="#" class="text-base text-stone-500 hover:text-stone-900">Contact Us</a>
+                  </li>
+                  <li>
+                    <a href="#" class="text-base text-stone-500 hover:text-stone-900">API Status</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <%# Additional footer categories %>
+            <%# <div class="md:grid md:grid-cols-2 md:gap-8">
+              <div>
                 <h3 class="text-base font-medium text-stone-900">Solutions</h3>
                 <ul role="list" class="mt-4 space-y-4">
                   <li>
@@ -117,45 +154,6 @@ It is not content-- which should be stored in the view folder of the controller 
                 </ul>
               </div>
               <div class="mt-12 md:mt-0">
-                <h3 class="text-base font-medium text-stone-900">Support</h3>
-                <ul role="list" class="mt-4 space-y-4">
-                  <li>
-                    <a href="#" class="text-base text-stone-500 hover:text-stone-900">Pricing</a>
-                  </li>
-                  <li>
-                    <a href="#" class="text-base text-stone-500 hover:text-stone-900">Documentation</a>
-                  </li>
-                  <li>
-                    <a href="#" class="text-base text-stone-500 hover:text-stone-900">Guides</a>
-                  </li>
-                  <li>
-                    <a href="#" class="text-base text-stone-500 hover:text-stone-900">API Status</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="md:grid md:grid-cols-2 md:gap-8">
-              <div>
-                <h3 class="text-base font-medium text-stone-900">Company</h3>
-                <ul role="list" class="mt-4 space-y-4">
-                  <li>
-                    <a href="#" class="text-base text-stone-500 hover:text-stone-900">About</a>
-                  </li>
-                  <li>
-                    <a href="#" class="text-base text-stone-500 hover:text-stone-900">Blog</a>
-                  </li>
-                  <li>
-                    <a href="#" class="text-base text-stone-500 hover:text-stone-900">Jobs</a>
-                  </li>
-                  <li>
-                    <a href="#" class="text-base text-stone-500 hover:text-stone-900">Press</a>
-                  </li>
-                  <li>
-                    <a href="#" class="text-base text-stone-500 hover:text-stone-900">Partners</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="mt-12 md:mt-0">
                 <h3 class="text-base font-medium text-stone-900">Legal</h3>
                 <ul role="list" class="mt-4 space-y-4">
                   <li>
@@ -169,7 +167,7 @@ It is not content-- which should be stored in the view folder of the controller 
                   </li>
                 </ul>
               </div>
-            </div>
+            </div> %>
           </div>
         </div>
         <div class="mt-12 border-t border-stone-200 py-8">

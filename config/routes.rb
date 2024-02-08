@@ -21,7 +21,7 @@ Rails.application.routes.draw do
 
   # blog
   resources :articles do
-    resources :comments
+    resources :comments, only: %i[create destroy edit update]
   end
 end
 # Expands into the routes below

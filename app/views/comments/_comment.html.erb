@@ -14,7 +14,7 @@
             <div>
               <div class="text-sm">
                 <strong>
-                  <a href="#" class="font-medium text-stone-900"><%= comment.commenter %></a>
+                  <a href="#" class="font-medium text-amber-700"><%= comment.commenter %></a>
                 </strong>
               </div>
               <p class="mt-0.5 text-sm text-stone-500"><%= comment.created_at.strftime("%B %d, %Y") %>
@@ -23,11 +23,13 @@
             <div class="mt-2 mb-6 text-sm text-stone-700">
               <p><%= comment.body %></p>
             </div>
-            <!-- addd Photo link -->
+            <!-- Edit Comment -->
+            <%= render 'comments/edit', article: @article, comment: @comment, class: "inline-flex items-center gap-x-0.5 rounded-md bg-stone-100 px-2 py-2 text-xs font-medium text-stone-500" %>
+            <!-- Delete Button  -->
             <div class="absolute top-0 right-0 mt-2 -mr-2 group">
               <%= link_to [comment.article, comment],
              method: :delete,
-             data: { turbo_confirm: "Are you sure?", turbo_method: :delete }, 
+             data: { turbo_confirm: "Are you sure you want to delete this comment?", turbo_method: :delete }, 
              class: "inline-flex items-center gap-x-0.5 rounded-md bg-stone-100 px-1 py-1 text-xs font-medium text-stone-700" do %>
                 <span class="group relative h-3.5 w-3.5 rounded-sm hover:bg-stone-600/20">
                   <span class="sr-only">Delete Comment</span>
@@ -37,7 +39,6 @@
                 </span>
               <% end %>
             </div>
-            <%# delete button %>
           </div>
         </div>
       </div>
